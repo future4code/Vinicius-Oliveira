@@ -6,6 +6,12 @@ export abstract class BaseDatabase {
 
     private static connection: Knex | null = null;
 
+    protected tableNames = {
+        bands:"NOME_TABELA_BANDAS",
+        shows:"NOME_TABELA_SHOWS",
+        users:"NOME_TABELA_USUÁRIOS"
+    }
+
     protected getConnection(): Knex{
         if(!BaseDatabase.connection){
             BaseDatabase.connection = knex({
@@ -17,7 +23,7 @@ export abstract class BaseDatabase {
                   password: process.env.DB_PASSWORD,
                   database: process.env.DB_DATABASE_NAME,
                 },
-              });        
+              });
         }
 
         return BaseDatabase.connection;

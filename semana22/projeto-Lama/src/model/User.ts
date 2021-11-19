@@ -1,3 +1,22 @@
+//Acredito que faça mais sentido as interfaces aparecerem anteriormente a designação das classes que irão utilizar suas propriedades.
+
+export interface UserInputDTO{
+    email: string
+    password: string
+    name: string
+    role: string
+}
+
+export interface LoginInputDTO{
+    email: string
+    password: string
+}
+
+export enum UserRole{
+    NORMAL = "NORMAL",
+    ADMIN = "ADMIN"
+}
+
 export class User{
     constructor(
     private id: string,
@@ -63,21 +82,4 @@ export class User{
       }
 
 
-}
-
-export interface UserInputDTO{
-    email: string;
-    password: string;
-    name: string;
-    role: string;
-}
-
-export interface LoginInputDTO{
-    email: string;
-    password: string;
-}
-
-export enum UserRole{
-    NORMAL = "NORMAL",
-    ADMIN = "ADMIN"
 }
