@@ -1,0 +1,23 @@
+{
+  "name": "exercicio-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "clear && jest",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "jest": "^27.0.4",
+    "parcel-bundler": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "typescript": "4.2.3"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": []
+}
